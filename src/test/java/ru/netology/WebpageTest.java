@@ -15,8 +15,9 @@ public class WebpageTest {
     private String when(boolean trim) {
         long daysToAdd = 4;
         long monthsToAdd = 1;
+        long yearsToAdd = 1;
                 if (trim)
-            return LocalDate.now().plusDays(daysToAdd).format(DateTimeFormatter.ofPattern("d"));
+            return LocalDate.now().plusMonths(monthsToAdd).plusYears(yearsToAdd).plusDays(daysToAdd).format(DateTimeFormatter.ofPattern("d"));
         else
             return LocalDate.now().plusMonths(monthsToAdd).plusDays(daysToAdd).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
